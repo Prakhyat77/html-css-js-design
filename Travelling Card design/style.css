@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    color: #887C68;
+    background-color:#e7e7e7;
+}
+
+/* community */
+
+.heading{
+    margin-top:10%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 51px;
+    text-align: center;
+    font-family: 'Martel Sans', sans-serif;
+    margin-bottom: 3%;
+}
+
+.box {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    background-color:rgb(255, 255, 255);
+    width: 350px;  
+    max-height: 500px; 
+    margin:20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.card-image img{
+    width: 100%;
+    height: 230px;
+    margin-bottom: 15px;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.description {
+    min-height: 180px;
+}
+
+.description p{
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    background-color:#e7e7e7;
+    padding: 15px 15px;
+    display: block;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+/* services */
+
+.services{
+    margin:15%;
+}
+
+.slider{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgbx{
+    position:relative;
+    width: 321px;
+    height: 500px;
+    margin-bottom: 20%;
+}
+
+.imgbx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgbx .content{
+    position:absolute;
+    width: 100%;
+    height: 12%;
+    bottom: 0;
+    z-index: 1;
+}
+
+.imgbx .content::before{
+    position:absolute;
+    content:"";
+    height: 100%;
+    width: 100%;
+    background: rgba(56, 56, 56, 0.41);
+    backdrop-filter: blur(1px);
+    z-index: -1;
+}
+
+.content h5{
+    color:#fff;
+    padding-top: 5px;
+    font-size:28px;
+    text-align:center;
+    font-weight:600px;
+    line-height: 32px; 
+    font-family: 'Martel Sans', sans-serif;
+}
+
+.swiper-button-next{
+    color: rgb(66, 66, 66);
+    background-color: #fff;
+    margin: -10px;
+    top: 32%;
+}
+
+  .swiper-button-prev{
+    color: rgb(66, 66, 66);
+    background-color: #fff;
+    margin: -10px;
+    top: 32%;
+}
+
+
+/* responsive services */
+.re-services{
+    display: none;
+}
+
+
+.story-container ul{
+    list-style-type: none;
+    user-select: none;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    
+}
+
+.story-container ul::-webkit-scrollbar{
+    display: none;
+}
+
+.story-container ul li{
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20%;
+}
+
+.story-container ul li:first-child{
+    padding-left: 20px;
+}
+
+.story-container ul li:last-child{
+    padding-right: 20px;
+}
+
+.story{
+    width: 320px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.story img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media screen and (max-width: 980px){
+    .community>.heading{
+        font-size: 22px;
+        margin-top:90px;
+    }
+    .card{
+        width: 450px;
+        margin:20px;
+    }
+
+    .description {
+        min-height: 130px;
+    }
+
+    .description> p{
+        font-size:18px;
+    }
+
+    .services{
+        display: none;
+    }
+
+
+    .re-services{
+        display: block;
+        margin-top:190px;
+    }
+
+    .content h5{
+        font-size:23px;
+    }
+}
+
+
+
+
+
